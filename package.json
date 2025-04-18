@@ -1,0 +1,51 @@
+{
+  "name": "empoar-platform-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Brian Mugisa",
+  "license": "MIT",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brianmugisa/empoar-platform-monorepo.git"
+  },
+  "keywords": [
+    "crowd-investment",
+    "real-estate",
+    "solar-projects",
+    "east-africa",
+    "investment-platform"
+  ],
+  "scripts": {
+    "dev": "",
+    "dev:backend": "",
+    "dev:frontend": "pnpm --filter @empoar-platform/frontend dev",
+    "build:frontend": "pnpm --filter @empoar-platform/frontend build",
+    "build": "",
+    "build:backend": "",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.8.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
+}
