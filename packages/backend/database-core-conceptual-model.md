@@ -30,5 +30,5 @@ erDiagram
     PROJECT ||--|| REPORT : "has"
     MANAGER ||--|| PROJECT : "manages"
     MANAGER ||--|| REPORT : "builds"
-
+``
 ```

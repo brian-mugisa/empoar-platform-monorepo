@@ -123,7 +123,11 @@ erDiagram
 
     REPORTS {
         int report_id PK
+        int project_id FK
         string type
+        string content
+        date_time created_at
+        date_time updated_at
     }
 
     USERS ||--|| ROLES : "has"
